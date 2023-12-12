@@ -26,4 +26,5 @@
  /Users/om/Library/Arduino15/packages/arduboy-homemade/hardware/avr/1.3.4/libraries/Arduboy2/src/SpritesB.h \
  /Users/om/Library/Arduino15/packages/arduboy-homemade/hardware/avr/1.3.4/cores/arduboy/Print.h \
  /Users/om/Arduboy/IUseArduboyBTW/build/sketch/src/entity.h \
- /Users/om/Arduboy/IUseArduboyBTW/build/sketch/src/vector2.h
+ /Users/om/Arduboy/IUseArduboyBTW/build/sketch/src/vector2.h \
+ /Users/om/Arduboy/IUseArduboyBTW/build/sketch/src/assets.h

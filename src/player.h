@@ -2,6 +2,7 @@
 
 #include <Arduboy2.h>
 #include "entity.h"
+#include "assets.h"
 
 class Player : public Entity
 {
@@ -13,6 +14,8 @@ class Player : public Entity
 		};
 
 	private:
+		bool isRight;
+
 		void input();
 
 	public:	

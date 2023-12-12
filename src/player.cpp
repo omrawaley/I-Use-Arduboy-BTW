@@ -20,11 +20,15 @@ void Player::input()
 	if (Arduboy2::pressed(LEFT_BUTTON))
 	{
 		this->vel.x -= Physics::speed;
+
+		this->isRight = false;
 	}
 
 	if (Arduboy2::pressed(RIGHT_BUTTON))
 	{
 		this->vel.x += Physics::speed;
+
+		this->isRight = true;
 	}
 }
 
@@ -59,4 +63,8 @@ void Player::update()
 void Player::draw()
 {
 	Arduboy2::drawRect(this->pos.x, this->pos.y, this->width, this->height, WHITE);
+
+	Arduboy2::drawRect(this->pos.x + 2, this->pos.y + 3, 1, 2, WHITE);
+
+	Arduboy2::drawRect(this->pos.x + 5, this->pos.y + 3, 1, 2, WHITE);
 }

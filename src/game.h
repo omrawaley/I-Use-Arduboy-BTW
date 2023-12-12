@@ -9,11 +9,11 @@
 #include "player.h"
 #include "npc.h"
 
-constexpr char missionMessageText[] PROGMEM = "After years of\ninstalling and\nconfiguring, you are\nnow ready. Go and\nshow the world that\nthey cannot\ncomprehend your\nultimate power.            ";
+constexpr char missionMessageText[] PROGMEM = "After years of\ninstalling and\nconfiguring, you are\nnow ready. Go and\ntell the world that\nthey cannot\ncomprehend your\nultimate power.            ";
 
-constexpr char playerMessage[] = "I use Arduboy BTW";
+constexpr char *playerMessage = "I use Arduboy BTW";
 
-constexpr char npcMessage[] = "Weirdo";
+constexpr char *npcMessages[] = {"Weirdo", "Nerd", "Bro WTF", "Okay?", "Stop!"};
 
 class Game
 {

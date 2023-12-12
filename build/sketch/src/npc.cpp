@@ -90,6 +90,11 @@ void NPC::update(Vector2 playerPos, uint8_t row)
 		}
 	}
 
+	if(!this->hasMessage)
+	{
+		this->message = nullptr;
+	}
+
 	this->vel /= Physics::friction;
 	this->pos += this->vel;
 }
@@ -97,4 +102,8 @@ void NPC::update(Vector2 playerPos, uint8_t row)
 void NPC::draw()
 {
 	Arduboy2::fillRect(this->pos.x, this->pos.y, this->width, this->height, WHITE);
+
+	Arduboy2::drawRect(this->pos.x + 2, this->pos.y + 3, 1, 2, BLACK);
+
+	Arduboy2::drawRect(this->pos.x + 5, this->pos.y + 3, 1, 2, BLACK);
 }

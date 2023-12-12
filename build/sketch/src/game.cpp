@@ -92,7 +92,7 @@ void Game::drawNeofetch()
 
 void Game::updateMissionMessage()
 {
-	if(this->arduboy.everyXFrames(5))
+	if(this->arduboy.everyXFrames(4))
 	{
 		this->slowPrinter.update();
 	}
@@ -136,12 +136,22 @@ void Game::drawGame()
 
 				this->font3x5.setCursor(npc.pos.x - 8, npc.pos.y - 8);
 
-				this->font3x5.print(npcMessage);	
+				if(!npc.hasMessage)
+				{
+					npc.message = npcMessages[random(0, 5)];
+					npc.hasMessage = true;
+				}
+
+				this->font3x5.print(npc.message);	
 
 				npc.isCreeped = true;	
 
 				weirdoLevel += 0.35;
 			}
+		}
+		else
+		{
+			npc.hasMessage = false;
 		}
 	}
 

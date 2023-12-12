@@ -23,9 +23,13 @@ class NPC : public Entity
 		NPCDirection direction;
 
 	public:
+		const char *message;
+
 		bool isActive;
 
 		bool isCreeped;
+
+		bool hasMessage;
 
 	public:
 		NPC();

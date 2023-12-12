@@ -11,7 +11,8 @@ Try to get the "Weirdo Level" counter as high as you can.
 
 <img width="600" alt="image" src="https://github.com/omrawaley/I-Use-Arduboy-BTW/assets/133281331/43a7deaa-c06d-473f-ac61-ba910d7bc556">
 
-<img width="600" alt="image" src="https://github.com/omrawaley/I-Use-Arduboy-BTW/assets/133281331/e4d5d21d-4006-48f4-b553-1d310d0306b0">
+<img width="600" alt="image" src="https://github.com/omrawaley/I-Use-Arduboy-BTW/assets/133281331/ce3b9a4c-75e1-49cc-8ca4-e439c0206195">
+
 
 ## Controls
 Up, Down, Left, Right: Movement

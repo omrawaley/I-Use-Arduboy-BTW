@@ -1,4 +1,10 @@
 #line 1 "/Users/om/Arduboy/IUseArduboyBTW/src/fonts/Font3x5.cpp"
+/*
+  NOTE: Font3x5 was created by 
+  @filmote but was modified to 
+  add the question mark by @omrawaley
+*/
+
 #include <Arduino.h>
 #include <Sprites.h>
 #include <Print.h>
@@ -11,6 +17,7 @@
 
 #define CHAR_EXCLAMATION 33
 #define CHAR_PERIOD 46
+#define CHAR_QUESTION 63
 #define CHAR_LETTER_A 65
 #define CHAR_LETTER_Z 90
 #define CHAR_LETTER_A_LOWER 97
@@ -21,10 +28,12 @@
 #ifdef USE_LOWER_CASE
   #define FONT_EXCLAMATION_INDEX 62
   #define FONT_PERIOD_INDEX 63
+  #define FONT_QUESTION_INDEX 64
   #define FONT_NUMBER_INDEX 52
 #else
   #define FONT_EXCLAMATION_INDEX 36
   #define FONT_PERIOD_INDEX 37
+  #define FONT_QUESTION_INDEX 38
   #define FONT_NUMBER_INDEX 26
 #endif
 
@@ -353,8 +362,12 @@ const uint8_t PROGMEM font_images[] = {
   // #46 Symbol '.'.
   0x00,  // ░░░░░░░░
   0x10,  // ░░░▓░░░░
-  0x00   // ░░░░░░░░
+  0x00,  // ░░░░░░░░
 
+  // #45 Symbol '?'.
+  0x01, 
+  0x15, 
+  0x02, 
 };
 
 
@@ -410,6 +423,10 @@ void Font3x5::printChar(const char c, const int8_t x, int8_t y) {
       
     case CHAR_PERIOD:
       idx = FONT_PERIOD_INDEX;
+      break;
+
+    case CHAR_QUESTION:
+      idx = FONT_QUESTION_INDEX;
       break;
 
   }
